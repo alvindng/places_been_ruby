@@ -1,0 +1,21 @@
+<h1>Locations</h1>
+
+<p>List out the places you've been:</p>
+
+<ul>
+  <% @locations.each() do |location| %>
+    <li><%= location.description() %></li>
+  <% end %>
+</ul>
+
+<p>Add a new location:</p>
+
+<form action="/locations" method="post">
+  <label for="description">Location description</label>
+  <input id="description" name="description" type="text">
+
+  <button type="submit">Add Location</button>
+</form>
+<p>
+  <a href='/clear'>Clear Page</a>
+</p>
